@@ -1,0 +1,716 @@
+Here is the complete HTML/CSS document for the MacLinker GitHub README-style landing page. It delivers a clean, SEO-optimized layout with clear download instructions, feature highlights, and a friendly step-by-step guide for non-technical users.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacLinker — One Keyboard &amp; Mouse Across Your Macs | Free Download</title>
+<meta name="description" content="MacLinker is a free, open-source alternative to Universal Control. Share one keyboard and mouse across your Macs over Wi-Fi, Ethernet or a USB-C cable — even alongside a VPN. Includes clipboard sync and file transfer.">
+<meta name="keywords" content="apple-silicon, clipboard-sync, continuity, file-transfer, homebrew-cask, keyboard-sharing, kvm, macos, menubar-app, mouse-sharing, swift, swiftui, universal-control">
+<meta name="author" content="MacLinker">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2575fc">
+<link rel="canonical" href="https://github.com/wici123/MacLinker">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MacLinker">
+<meta property="og:title" content="MacLinker — One Keyboard &amp; Mouse Across Your Macs">
+<meta property="og:description" content="An open-source alternative to Universal Control that works over Wi-Fi, Ethernet or a USB-C cable — and alongside VPNs. Free download.">
+<meta property="og:url" content="https://github.com/wici123/MacLinker/releases">
+<meta property="og:image" content="https://opengraph.githubassets.com/1/wici123/MacLinker">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MacLinker — One Keyboard &amp; Mouse Across Your Macs">
+<meta name="twitter:description" content="Open-source Universal Control alternative. Keyboard sharing, mouse sharing, clipboard sync and file transfer over Wi-Fi, Ethernet or USB-C.">
+<meta name="twitter:image" content="https://opengraph.githubassets.com/1/wici123/MacLinker">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MacLinker",
+  "operatingSystem": "macOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "One keyboard & mouse across your Macs — an open-source alternative to Universal Control that works over Wi-Fi, Ethernet or a USB-C cable (and alongside VPNs).",
+  "url": "https://github.com/wici123/MacLinker/releases",
+  "downloadUrl": "https://github.com/wici123/MacLinker/releases",
+  "softwareVersion": "latest",
+  "license": "https://opensource.org/licenses/MIT",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #1f2430;
+    background-color: #f6f8fc;
+    background-image: radial-gradient(circle at 12% 0%, #e8eefc 0%, #f6f8fc 45%, #f9fafc 100%);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 72px 20px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 30px;
+    margin: 0 0 22px 0;
+    box-shadow: 0 10px 30px rgba(31, 36, 48, 0.07);
+    border: 1px solid #e8ecf5;
+  }
+  .hero {
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f2f6ff 100%);
+    border-radius: 22px;
+    padding: 44px 28px 38px 28px;
+    box-shadow: 0 14px 40px rgba(31, 36, 48, 0.10);
+    border: 1px solid #e2e9f8;
+    margin-bottom: 26px;
+  }
+  h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.5px;
+    color: #131826;
+  }
+  h2 {
+    font-size: 1.45rem;
+    line-height: 1.35;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.3px;
+    color: #131826;
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 24px 0 8px 0;
+    color: #1b2233;
+  }
+  p { margin: 0 0 16px 0; }
+  .lead {
+    font-size: 1.12rem;
+    color: #46506a;
+    max-width: 640px;
+    margin: 0 auto 26px auto;
+  }
+  .btn {
+    display: inline-block;
+    padding: 17px 40px;
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 999px;
+    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 12px 26px rgba(37, 117, 252, 0.35);
+    border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(37, 117, 252, 0.42);
+  }
+  .btn-alt {
+    background-image: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);
+    box-shadow: 0 12px 26px rgba(248, 87, 166, 0.32);
+  }
+  .btn-alt:hover { box-shadow: 0 16px 32px rgba(248, 87, 166, 0.40); }
+  .btn-wrap { margin: 0 0 14px 0; }
+  .small {
+    font-size: 0.92rem;
+    color: #6b7590;
+  }
+  ul, ol { margin: 0 0 16px 0; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+  }
+  .steps li {
+    position: relative;
+    padding: 4px 0 4px 46px;
+    margin-bottom: 14px;
+  }
+  .steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 50%;
+  }
+  .feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .feature {
+    flex: 1 1 240px;
+    background: #f9fbff;
+    border: 1px solid #e6ecf9;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 12px rgba(31, 36, 48, 0.04);
+  }
+  .feature h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.02rem;
+  }
+  .feature p {
+    margin: 0;
+    font-size: 0.96rem;
+    color: #4c5670;
+  }
+  .callout {
+    background: #fff8ec;
+    border: 1px solid #f5dfba;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 0 0 16px 0;
+    font-size: 0.98rem;
+    color: #5a4a2c;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7a8299;
+    padding: 26px 12px 0 12px;
+  }
+  a { color: #2575fc; }
+  @media (max-width: 620px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.62rem; }
+    h2 { font-size: 1.24rem; }
+    .card { padding: 22px 18px; }
+    .hero { padding: 32px 18px 28px 18px; }
+    .btn { display: block; width: 100%; padding: 16px 18px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🖱️ MacLinker - One Keyboard, Every Mac</h1>
+    <p class="lead">Control several Macs with a single keyboard and mouse — no extra hardware, no dongles, no subscriptions. MacLinker is a free, open-source alternative to Universal Control that works over Wi-Fi, Ethernet or a USB-C cable, and keeps working even when your VPN is switched on.</p>
+    <div class="btn-wrap">
+      <a class="btn" href="https://github.com/wici123/MacLinker/releases">⬇️ Download MacLinker Free</a>
+    </div>
+    <p class="small">Free and open source · No account required · Works alongside your VPN</p>
+  </header>
+
+  <section class="card">
+    <h2>🚀 What Is MacLinker?</h2>
+    <p>If you own more than one Mac, you probably know the small annoyance of owning more than one keyboard and mouse too. You reach for the wrong one, you bump the wrong trackpad, and your desk slowly turns into a tangle of cables.</p>
+    <p>MacLinker fixes that. Install it on the computers you want to link together, and they begin to act like one setup. Move your mouse off the edge of one screen and it simply appears on the next Mac over. Type on one keyboard and the letters land wherever your mouse pointer is. Copy something on one machine and paste it on another. Drag a file across and it transfers over your own network instead of through a cloud service.</p>
+    <p>Everything runs locally between your own machines. There is no account to create, no monthly fee, and no data sent to a third-party server. MacLinker lives quietly in your menu bar, ready when you need it and out of the way when you don't.</p>
+    <p>Because it uses the network you already have, MacLinker doesn't care whether your Macs are side by side on a desk or in different rooms on the same home network. Wi-Fi, a wired Ethernet connection, or a direct USB-C cable between two machines all work.</p>
+  </section>
+
+  <section class="card">
+    <h2>✨ Key Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>⌨️ Keyboard Sharing</h3>
+        <p>Type on one keyboard and control every linked Mac. Your text goes to whichever screen your pointer is on.</p>
+      </div>
+      <div class="feature">
+        <h3>🖱️ Mouse Sharing</h3>
+        <p>Slide your pointer off one screen edge and it continues onto the next Mac. No extra hardware or switch box needed.</p>
+      </div>
+      <div class="feature">
+        <h3>📋 Clipboard Sync</h3>
+        <p>Copy text or links on one Mac and paste them straight into an app on another. Your clipboard follows your pointer.</p>
+      </div>
+      <div class="feature">
+        <h3>📁 File Transfer</h3>
+        <p>Send files directly between your own machines over your local network. No cloud upload, no emailing yourself.</p>
+      </div>
+      <div class="feature">
+        <h3>📶 Any Connection</h3>
+        <p>Wi-Fi, Ethernet or a USB-C cable between two Macs. MacLinker adapts to whatever you already have set up.</p>
+      </div>
+      <div class="feature">
+        <h3>🛡️ Works With VPNs</h3>
+        <p>Unlike many alternatives, MacLinker keeps working while a VPN is active, so you never have to disconnect to share a screen.</p>
+      </div>
+      <div class="feature">
+        <h3>🧭 Menu Bar App</h3>
+        <p>Everything is controlled from a small menu bar icon. Pair a machine, rearrange screens or pause sharing in two clicks.</p>
+      </div>
+      <div class="feature">
+        <h3>⚡ Native and Light</h3>
+        <p>Built in Swift and SwiftUI, including full support for Apple Silicon Macs. It stays fast and uses very little power.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>💻 Download &amp; Setup</h2>
+    <p>Getting started takes a couple of minutes. Downloading and running MacLinker does not require any programming knowledge — if you can install a normal app, you can do this.</p>
+    <p style="text-align:center; margin: 22px 0;">
+      <a class="btn btn-alt" href="https://github.com/wici123/MacLinker/releases">⬇️ Get the Latest Release</a>
+    </p>
+    <p style="text-align:center;" class="small">Visit this link to download the application.</p>
+
+    <h3>Step-by-step</h3>
+    <ol class="steps">
+      <li><strong>Open the download page.</strong> Click the button above, or go to <a href="https://github.com/wici123/MacLinker/releases">https://github.com/wici123/MacLinker/releases</a> in any web browser.</li>
+      <li><strong>Find the newest release.</strong> The most recent version always appears at the top of that page, clearly labelled as the latest release.</li>
+      <li><strong>Download the file listed there.</strong> Click the download link shown in that release to save the file to your computer's Downloads folder.</li>
+      <li><strong>Run the file you just downloaded.</strong> Open your Downloads folder, double-click the file, and let it finish.</li>
+      <li><strong>Allow it to open if your computer asks.</strong> On Windows you may see a security prompt asking whether you want to run the file — click <em>Yes</em> or <em>Run</em> to continue.</li>
+      <li><strong>Open MacLinker.</strong> Once it finishes, look for the MacLinker icon in your menu bar or taskbar and click it to open the main window.</li>
+    </ol>
+
+    <div class="callout">
+      💡 <strong>Tip:</strong> Repeat this same download step on every Mac you want to link together. Each machine needs MacLinker installed before it can be paired.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🧭 Setting Up Your First Pair</h2>
+    <p>With MacLinker installed on two or more machines, the rest is a short, guided process.</p>
+    <ol class="steps">
+      <li><strong>Put your Macs on the same network.</strong> Connect them to the same Wi-Fi network, the same wired network, or join them directly with a USB-C cable.</li>
+      <li><strong>Open MacLinker on each Mac.</strong> The menu bar icon shows that the app is running and ready.</li>
+      <li><strong>Look for nearby machines.</strong> MacLinker lists the other computers it can see on your network. Select the one you want to pair with.</li>
+      <li><strong>Approve the connection.</strong> A short confirmation appears on the other Mac. Accept it once, and the two machines remember each other.</li>
+      <li><strong>Arrange your screens.</strong> In the layout view, drag the icons so they match how your Macs sit on your desk. Left stays left, and the pointer flows naturally between them.</li>
+      <li><strong>Start using it.</strong> Move your pointer across the screen edge, and your keyboard and mouse take over the other Mac automatically.</li>
+    </ol>
+    <p>You can adjust the screen order at any time from the menu bar. Nothing is permanent — if you rearrange your desk, just rearrange the layout to match.</p>
+  </section>
+
+  <section class="card">
+    <h2>🔧 Tips and Troubleshooting</h2>
+    <h3>My other Mac doesn't appear in the list</h3>
+    <p>Confirm both machines are running MacLinker and are connected to the same network. If you use a VPN, MacLinker is designed to keep working with it, but make sure the app has been allowed through your computer's security prompts the first time it runs.</p>
+    <h3>The pointer feels laggy</h3>
+    <p>Wireless connections share bandwidth with everything else on your network. If you have a USB-C cable or an Ethernet cable available, using it gives the smoothest, fastest experience. Large file transfers are also much quicker over a cable.</p>
+    <h3>Clipboard sync isn't working</h3>
+    <p>Check that the two machines are still shown as connected in the menu bar. If either machine has been asleep, wake it, wait a moment, and the link should come back on its own.</p>
+    <h3>I want to pause sharing for a while</h3>
+    <p>Open the menu bar icon and switch sharing off. Your pairing is remembered, so you can turn it back on later without repeating the setup.</p>
+    <h3>I want to remove a Mac completely</h3>
+    <p>Open the menu bar list of paired machines, select the one you no longer need, and remove it. Do the same on the other Mac so neither side keeps an old entry.</p>
+  </section>
+
+  <section class="card">
+    <h2>❓ Frequently Asked Questions</h2>
+    <h3>Is MacLinker free?</h3>
+    <p>Yes. It is completely free and open source. There is no trial period, no paid tier and no account to sign up for.</p>
+    <h3>Do I need an internet connection?</h3>
+    <p>No. MacLinker works on your own local network. Once the app is downloaded, the link between your machines does not depend on the internet at all.</p>
+    <h3>Does it work without installing anything on the second Mac?</h3>
+    <p>Every Mac you want to link needs MacLinker installed. The download is the same for each machine.</p>
+    <h3>Is my data sent anywhere?</h3>
+    <p>No. Your keyboard, mouse, clipboard and file transfers travel directly between your own computers. Nothing passes through an outside server.</p>
+    <h3>What is the difference between this and Universal Control?</h3>
+    <p>MacLinker is an open-source alternative to Universal Control with the same core idea: one keyboard and mouse across multiple Macs. The difference is that MacLinker works over Wi-Fi, Ethernet or a USB-C cable, and keeps working when a VPN is running.</p>
+    <h3>How do I update to a newer version?</h3>
+    <p>Return to the download page, download the newest release, and run it. Your existing pairings stay in place.</p>
+  </section>
+
+  <section class="card">
+    <h2>🛡️ Privacy and Open Source</h2>
+    <p>MacLinker is open source, which means its code is publicly visible and anyone can review exactly what it does. Nothing is hidden.</p>
+    <p>Because the app runs entirely on your own machines and your own local network, your keystrokes, clipboard contents and files never leave your control. There are no analytics trackers, no advertising and no cloud storage involved in linking your Macs together.</p>
+    <p>If you prefer installing through package managers, the project is also distributed as a Homebrew Cask, which is handy for anyone who already uses Homebrew to keep apps up to date.</p>
+  </section>
+
+  <section class="card">
+    <h2>💬 Getting Help</h2>
+    <p>Stuck on a step? The fastest route to help is the project's GitHub page.</p>
+    <ul>
+      <li><strong>Download page:</strong> <a href="https://github.com/wici123/MacLinker/releases">https://github.com/wici123/MacLinker/releases</a></li>
+      <li><strong>Questions and bug reports:</strong> open an issue on the repository and describe what happened, including which Macs you are using and how they are connected.</li>
+      <li><strong>Feature ideas:</strong> also welcome as an issue. MacLinker is a community project and improvements come from users like you.</li>
+    </ul>
+    <p>When reporting<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MacLinker — One Keyboard &amp; Mouse Across Your Macs | Free Download</title>
+<meta name="description" content="MacLinker is a free, open-source alternative to Universal Control. Share one keyboard and mouse across your Macs over Wi-Fi, Ethernet or a USB-C cable — even alongside a VPN. Includes clipboard sync and file transfer.">
+<meta name="keywords" content="apple-silicon, clipboard-sync, continuity, file-transfer, homebrew-cask, keyboard-sharing, kvm, macos, menubar-app, mouse-sharing, swift, swiftui, universal-control">
+<meta name="author" content="MacLinker">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2575fc">
+<link rel="canonical" href="https://github.com/wici123/MacLinker">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MacLinker">
+<meta property="og:title" content="MacLinker — One Keyboard &amp; Mouse Across Your Macs">
+<meta property="og:description" content="An open-source alternative to Universal Control that works over Wi-Fi, Ethernet or a USB-C cable — and alongside VPNs. Free download.">
+<meta property="og:url" content="https://github.com/wici123/MacLinker/releases">
+<meta property="og:image" content="https://opengraph.githubassets.com/1/wici123/MacLinker">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MacLinker — One Keyboard &amp; Mouse Across Your Macs">
+<meta name="twitter:description" content="Open-source Universal Control alternative. Keyboard sharing, mouse sharing, clipboard sync and file transfer over Wi-Fi, Ethernet or USB-C.">
+<meta name="twitter:image" content="https://opengraph.githubassets.com/1/wici123/MacLinker">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MacLinker",
+  "operatingSystem": "macOS",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "One keyboard & mouse across your Macs — an open-source alternative to Universal Control that works over Wi-Fi, Ethernet or a USB-C cable (and alongside VPNs).",
+  "url": "https://github.com/wici123/MacLinker/releases",
+  "downloadUrl": "https://github.com/wici123/MacLinker/releases",
+  "softwareVersion": "latest",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: #1f2430;
+    background-color: #f6f8fc;
+    background-image: radial-gradient(circle at 12% 0%, #e8eefc 0%, #f6f8fc 45%, #f9fafc 100%);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 72px 20px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 30px;
+    margin: 0 0 22px 0;
+    box-shadow: 0 10px 30px rgba(31, 36, 48, 0.07);
+    border: 1px solid #e8ecf5;
+  }
+  .hero {
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f2f6ff 100%);
+    border-radius: 22px;
+    padding: 44px 28px 38px 28px;
+    box-shadow: 0 14px 40px rgba(31, 36, 48, 0.10);
+    border: 1px solid #e2e9f8;
+    margin-bottom: 26px;
+  }
+  h1 {
+    font-size: 2.15rem;
+    line-height: 1.25;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.5px;
+    color: #131826;
+  }
+  h2 {
+    font-size: 1.45rem;
+    line-height: 1.35;
+    margin: 0 0 14px 0;
+    letter-spacing: -0.3px;
+    color: #131826;
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 24px 0 8px 0;
+    color: #1b2233;
+  }
+  p { margin: 0 0 16px 0; }
+  .lead {
+    font-size: 1.12rem;
+    color: #46506a;
+    max-width: 640px;
+    margin: 0 auto 26px auto;
+  }
+  .btn {
+    display: inline-block;
+    padding: 17px 40px;
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 999px;
+    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 12px 26px rgba(37, 117, 252, 0.35);
+    border: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(37, 117, 252, 0.42);
+  }
+  .btn-alt {
+    background-image: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);
+    box-shadow: 0 12px 26px rgba(248, 87, 166, 0.32);
+  }
+  .btn-alt:hover { box-shadow: 0 16px 32px rgba(248, 87, 166, 0.40); }
+  .btn-wrap { margin: 0 0 14px 0; }
+  .small {
+    font-size: 0.92rem;
+    color: #6b7590;
+  }
+  ul, ol { margin: 0 0 16px 0; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+  }
+  .steps li {
+    position: relative;
+    padding: 4px 0 4px 46px;
+    margin-bottom: 14px;
+  }
+  .steps li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border-radius: 50%;
+  }
+  .feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .feature {
+    flex: 1 1 240px;
+    background: #f9fbff;
+    border: 1px solid #e6ecf9;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 12px rgba(31, 36, 48, 0.04);
+  }
+  .feature h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.02rem;
+  }
+  .feature p {
+    margin: 0;
+    font-size: 0.96rem;
+    color: #4c5670;
+  }
+  .callout {
+    background: #fff8ec;
+    border: 1px solid #f5dfba;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin: 0 0 16px 0;
+    font-size: 0.98rem;
+    color: #5a4a2c;
+  }
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7a8299;
+    padding: 26px 12px 0 12px;
+  }
+  a { color: #2575fc; }
+  @media (max-width: 620px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.62rem; }
+    h2 { font-size: 1.24rem; }
+    .card { padding: 22px 18px; }
+    .hero { padding: 32px 18px 28px 18px; }
+    .btn { display: block; width: 100%; padding: 16px 18px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>🖱️ MacLinker - One Keyboard, Every Mac</h1>
+    <p class="lead">Control several Macs with a single keyboard and mouse — no extra hardware, no dongles, no subscriptions. MacLinker is a free, open-source alternative to Universal Control that works over Wi-Fi, Ethernet or a USB-C cable, and keeps working even when your VPN is switched on.</p>
+    <div class="btn-wrap">
+      <a class="btn" href="https://github.com/wici123/MacLinker/releases">⬇️ Download MacLinker Free</a>
+    </div>
+    <p class="small">Free and open source · No account required · Works alongside your VPN</p>
+  </header>
+
+  <section class="card">
+    <h2>🚀 What Is MacLinker?</h2>
+    <p>If you own more than one Mac, you probably know the small annoyance of owning more than one keyboard and mouse too. You reach for the wrong one, you bump the wrong trackpad, and your desk slowly turns into a tangle of cables.</p>
+    <p>MacLinker fixes that. Install it on the computers you want to link together, and they begin to act like one setup. Move your mouse off the edge of one screen and it simply appears on the next Mac over. Type on one keyboard and the letters land wherever your mouse pointer is. Copy something on one machine and paste it on another. Drag a file across and it transfers over your own network instead of through a cloud service.</p>
+    <p>Everything runs locally between your own machines. There is no account to create, no monthly fee, and no data sent to a third-party server. MacLinker lives quietly in your menu bar, ready when you need it and out of the way when you don't.</p>
+    <p>Because it uses the network you already have, MacLinker doesn't care whether your Macs are side by side on a desk or in different rooms on the same home network. Wi-Fi, a wired Ethernet connection, or a direct USB-C cable between two machines all work.</p>
+  </section>
+
+  <section class="card">
+    <h2>✨ Key Features</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>⌨️ Keyboard Sharing</h3>
+        <p>Type on one keyboard and control every linked Mac. Your text goes to whichever screen your pointer is on.</p>
+      </div>
+      <div class="feature">
+        <h3>🖱️ Mouse Sharing</h3>
+        <p>Slide your pointer off one screen edge and it continues onto the next Mac. No extra hardware or switch box needed.</p>
+      </div>
+      <div class="feature">
+        <h3>📋 Clipboard Sync</h3>
+        <p>Copy text or links on one Mac and paste them straight into an app on another. Your clipboard follows your pointer.</p>
+      </div>
+      <div class="feature">
+        <h3>📁 File Transfer</h3>
+        <p>Send files directly between your own machines over your local network. No cloud upload, no emailing yourself.</p>
+      </div>
+      <div class="feature">
+        <h3>📶 Any Connection</h3>
+        <p>Wi-Fi, Ethernet or a USB-C cable between two Macs. MacLinker adapts to whatever you already have set up.</p>
+      </div>
+      <div class="feature">
+        <h3>🛡️ Works With VPNs</h3>
+        <p>Unlike many alternatives, MacLinker keeps working while a VPN is active, so you never have to disconnect to share a screen.</p>
+      </div>
+      <div class="feature">
+        <h3>🧭 Menu Bar App</h3>
+        <p>Everything is controlled from a small menu bar icon. Pair a machine, rearrange screens or pause sharing in two clicks.</p>
+      </div>
+      <div class="feature">
+        <h3>⚡ Native and Light</h3>
+        <p>Built in Swift and SwiftUI, including full support for Apple Silicon Macs. It stays fast and uses very little power.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>💻 Download &amp; Setup</h2>
+    <p>Getting started takes a couple of minutes. Downloading and running MacLinker does not require any programming knowledge — if you can install a normal app, you can do this.</p>
+    <p style="text-align:center; margin: 22px 0;">
+      <a class="btn btn-alt" href="https://github.com/wici123/MacLinker/releases">⬇️ Get the Latest Release</a>
+    </p>
+    <p style="text-align:center;" class="small">Visit this link to download the application.</p>
+
+    <h3>Step-by-step</h3>
+    <ol class="steps">
+      <li><strong>Open the download page.</strong> Click the button above, or go to <a href="https://github.com/wici123/MacLinker/releases">https://github.com/wici123/MacLinker/releases</a> in any web browser.</li>
+      <li><strong>Find the newest release.</strong> The most recent version always appears at the top of that page, clearly labelled as the latest release.</li>
+      <li><strong>Download the file listed there.</strong> Click the download link shown in that release to save the file to your computer's Downloads folder.</li>
+      <li><strong>Run the file you just downloaded.</strong> Open your Downloads folder, double-click the file, and let it finish.</li>
+      <li><strong>Allow it to open if your computer asks.</strong> On Windows you may see a security prompt asking whether you want to run the file — click <em>Yes</em> or <em>Run</em> to continue.</li>
+      <li><strong>Open MacLinker.</strong> Once it finishes, look for the MacLinker icon in your menu bar or taskbar and click it to open the main window.</li>
+    </ol>
+
+    <div class="callout">
+      💡 <strong>Tip:</strong> Repeat this same download step on every Mac you want to link together. Each machine needs MacLinker installed before it can be paired.
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🧭 Setting Up Your First Pair</h2>
+    <p>With MacLinker installed on two or more machines, the rest is a short, guided process.</p>
+    <ol class="steps">
+      <li><strong>Put your Macs on the same network.</strong> Connect them to the same Wi-Fi network, the same wired network, or join them directly with a USB-C cable.</li>
+      <li><strong>Open MacLinker on each Mac.</strong> The menu bar icon shows that the app is running and ready.</li>
+      <li><strong>Look for nearby machines.</strong> MacLinker lists the other computers it can see on your network. Select the one you want to pair with.</li>
+      <li><strong>Approve the connection.</strong> A short confirmation appears on the other Mac. Accept it once, and the two machines remember each other.</li>
+      <li><strong>Arrange your screens.</strong> In the layout view, drag the icons so they match how your Macs sit on your desk. Left stays left, and the pointer flows naturally between them.</li>
+      <li><strong>Start using it.</strong> Move your pointer across the screen edge, and your keyboard and mouse take over the other Mac automatically.</li>
+    </ol>
+    <p>You can adjust the screen order at any time from the menu bar. Nothing is permanent — if you rearrange your desk, just rearrange the layout to match.</p>
+  </section>
+
+  <section class="card">
+    <h2>🔧 Tips and Troubleshooting</h2>
+    <h3>My other Mac doesn't appear in the list</h3>
+    <p>Confirm both machines are running MacLinker and are connected to the same network. If you use a VPN, MacLinker is designed to keep working with it, but make sure the app has been allowed through your computer's security prompts the first time it runs.</p>
+    <h3>The pointer feels laggy</h3>
+    <p>Wireless connections share bandwidth with everything else on your network. If you have a USB-C cable or an Ethernet cable available, using it gives the smoothest, fastest experience. Large file transfers are also much quicker over a cable.</p>
+    <h3>Clipboard sync isn't working</h3>
+    <p>Check that the two machines are still shown as connected in the menu bar. If either machine has been asleep, wake it, wait a moment, and the link should come back on its own.</p>
+    <h3>I want to pause sharing for a while</h3>
+    <p>Open the menu bar icon and switch sharing off. Your pairing is remembered, so you can turn it back on later without repeating the setup.</p>
+    <h3>I want to remove a Mac completely</h3>
+    <p>Open the menu bar list of paired machines, select the one you no longer need, and remove it. Do the same on the other Mac so neither side keeps an old entry.</p>
+  </section>
+
+  <section class="card">
+    <h2>❓ Frequently Asked Questions</h2>
+    <h3>Is MacLinker free?</h3>
+    <p>Yes. It is completely free and open source. There is no trial period, no paid tier and no account to sign up for.</p>
+    <h3>Do I need an internet connection?</h3>
+    <p>No. MacLinker works on your own local network. Once the app is downloaded, the link between your machines does not depend on the internet at all.</p>
+    <h3>Does it work without installing anything on the second Mac?</h3>
+    <p>Every Mac you want to link needs MacLinker installed. The download is the same for each machine.</p>
+    <h3>Is my data sent anywhere?</h3>
+    <p>No. Your keyboard, mouse, clipboard and file transfers travel directly between your own computers. Nothing passes through an outside server.</p>
+    <h3>What is the difference between this and Universal Control?</h3>
+    <p>MacLinker is an open-source alternative to Universal Control with the same core idea: one keyboard and mouse across multiple Macs. The difference is that MacLinker works over Wi-Fi, Ethernet or a USB-C cable, and keeps working when a VPN is running.</p>
+    <h3>How do I update to a newer version?</h3>
+    <p>Return to the download page, download the newest release, and run it. Your existing pairings stay in place.</p>
+  </section>
+
+  <section class="card">
+    <h2>🛡️ Privacy and Open Source</h2>
+    <p>MacLinker is open source, which means its code is publicly visible and anyone can review exactly what it does. Nothing is hidden.</p>
+    <p>Because the app runs entirely on your own machines and your own local network, your keystrokes, clipboard contents and files never leave your control. There are no analytics trackers, no advertising and no cloud storage involved in linking your Macs together.</p>
+    <p>If you prefer installing through package managers, the project is also distributed as a Homebrew Cask, which is handy for anyone who already uses Homebrew to keep apps up to date.</p>
+  </section>
+
+  <section class="card">
+    <h2>💬 Getting Help</h2>
+    <p>Stuck on a step? The fastest route to help is the project's GitHub page.</p>
+    <ul>
+      <li><strong>Download page:</strong> <a href="https://github.com/wici123/MacLinker/releases">https://github.com/wici123/MacLinker/releases</a></li>
+      <li><strong>Questions and bug reports:</strong> open an issue on the repository and describe what happened, including which Macs you are using and how they are connected.</li>
+      <li><strong>Feature ideas:</strong> also welcome as an issue. MacLinker is a community project and improvements come from users like you.</li>
+    </ul>
+    <p>When reporting a problem, mentioning your macOS version, whether you were on Wi-Fi, Ethernet or USB-C, and whether a VPN was active will help others reproduce and fix the issue much faster.</p>
+  </section>
+
+  <footer>
+    <p>MacLinker — open-source keyboard and mouse sharing for Mac. Free download at <a href="https://github.com/wici123/MacLinker/releases">github.com/wici123/MacLinker/releases</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
+```
